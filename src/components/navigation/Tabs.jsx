@@ -48,7 +48,7 @@ function Tabs() {
                 <button
                     key={tab.id}
                     onClick={() => handleTabClick(tab.id)}
-                    className={`tab ${active === tab.id ? 'active' : ''}`}
+                    className={`tab g12 ${active === tab.id ? 'active' : ''}`}
                 >
                     <img src={tab.icon} alt={tab.id} />
                     <p>{tab.id}</p>

@@ -5,11 +5,13 @@
 .navigation {
     width: 240px;
     position: relative;
+    transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .navigation > :last-child {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 .navigation-block {
@@ -20,4 +22,189 @@
 .navigation-block > :first-child {
     position: absolute;
     left: 0;
+}
+
+/* ========================================================
+  NAVIGATION ANIMATION
+======================================================== */
+
+.navigation.closed {
+    width: 40px;
+}
+
+.navigation.closed .tab p,
+.navigation.closed .searchbar > :nth-last-child(-n +2),
+.navigation.closed .navigation-block > :nth-child(-n +2) {
+    opacity: 0;
+    pointer-events: none;
+    transition: all cubic-bezier(0.25, 0.8, 0.25, 1) .2s;
+}
+
+.navigation.closed .tab,
+.navigation.closed .searchbar {
+    color: transparent;
+    transition: all cubic-bezier(0.25, 0.8, 0.25, 1) .2s;
+}
+
+.navigation.closed .close-nav img {
+    transform: scaleX(-1);
+}
+
+.navigation.closed > :first-child {
+    padding-right: 6px;
+}
+
+.navigation.closed > :last-child {
+    padding-right: 4px;
+}
+
+.navigation.opening .tab p,
+.navigation.opening .searchbar > :nth-last-child(-n +2),
+.navigation.opening .navigation-block > :nth-child(-n +2) {
+    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1) .1s;
+}
+
+.navigation.opening .tab,
+.navigation.opening .searchbar {
+    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1) .1s;
+}
+
+/* ========================================================
+  TABS
+======================================================== */
+
+.tab {
+    display: grid;
+    grid-template-columns: 17px 1fr;
+    padding: 11px;
+    height: 40px;
+    border-radius: 8px;
+    color: #6D6D6D;
+    font-variation-settings: 'wght' 530;
+    font-size: 13px;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab div {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    border-radius: 8px;
+    z-index: 0;
+    opacity: .0;
+    transition: all ease-in-out .18s;
+    background: linear-gradient(-180deg, rgba(255, 255, 255) 0%, rgba(255, 255, 255, 50%) 100%);
+}
+
+.tab::before {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    border-radius: 7px;
+    display: block;
+    content: "";
+    transition: all ease-in-out .18s;
+}
+
+.tab img {
+    opacity: .4;
+    z-index: 2;
+}
+
+.tab p {
+    z-index: 2;
+}
+
+.tab:hover {
+    background-color: #131313;
+    color: #CECECE;
+}
+
+.tab:hover img {
+    opacity: .8;
+}
+
+.tab.active {
+    background-color: #171717;
+    color: #FCFCFC;
+}
+
+.tab.active img {
+    opacity: 1;
+}
+
+.tab.active div {
+    opacity: .05;
+}
+
+.tab.active::before {
+    background-color: #171717;
+}
+
+/* ========================================================
+  THEMETOGGLE
+======================================================== */
+
+.theme-toggle {
+    width: 66px;
+    height: 28px;
+    background-color: #363636;
+    box-shadow: inset 0px 1px 6px 2px rgba(0, 0, 0, 30%);
+    position: relative;
+    border-radius: 50px;
+    opacity: .75;
+    padding: 3px;
+}
+
+.theme-toggle:hover {
+    opacity: 1;
+}
+
+.theme-toggle::before {
+    content: "";
+    display: block;
+    height: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(180deg, #C3C3C6 0%, #777779 100%);
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 35%);
+    transition: all ease-in-out .25s;
+    transform: translateX(-19px);
+}
+
+.theme-toggle.light::before {
+    transform: translateX(19px);
+}
+
+.theme-toggle img {
+    position: absolute;
+    transition: all ease-in-out .25s;
+}
+
+.theme-toggle > :first-child {
+    margin-left: -4px;
+    left: 5px;
+    transform: translateX(-38%) translateY(38%) scale(0%) rotate(-90deg);
+}
+
+.theme-toggle.light > :first-child {
+    transform: translateX(0%) translateY(0%) scale(100%) rotate(0deg);
+}
+
+.theme-toggle > :last-child {
+    right: 5px;
+    margin-right: -4px;
+    transform: translateX(0%) translateY(0%) scale(100%) rotate(0deg);
+}
+
+.theme-toggle.light > :last-child {
+    transform: translateX(37%) translateY(37%) scale(0%) rotate(90deg);
+
 }
