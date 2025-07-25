@@ -1,0 +1,23 @@
+/* ========================================================
+  NAVIGATION
+======================================================== */
+
+.navigation {
+    width: 240px;
+    position: relative;
+}
+
+.navigation > :last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+.navigation-block {
+    position: relative;
+    min-height: 32px;
+}
+
+.navigation-block > :first-child {
+    position: absolute;
+    left: 0;
+}

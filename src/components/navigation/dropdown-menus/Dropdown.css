@@ -1,0 +1,24 @@
+/* ========================================================
+  DROPDOWN
+======================================================== */
+
+/* ========================================================
+  ACCOUNT
+======================================================== */
+
+.dropdown-wrap.account,
+.account-dropdown-toggle,
+.account-dropdown-toggle img {
+    width: 32px;
+    max-height: 32px;
+}
+
+.account-dropdown-toggle {
+    opacity: .8;
+    position: relative;
+}
+
+.account-dropdown-toggle:hover {
+    opacity: 1;
+}
+

@@ -1,0 +1,76 @@
+/* ========================================================
+  GLOBAL STYLES
+======================================================== */
+
+* {
+    font-family: "inter-variable", sans-serif;
+    box-sizing: border-box;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    caret-color: transparent;
+    text-align: left;
+}
+
+body {
+    background-color: #090909;
+    padding: 20px;
+}
+
+body,
+html,
+#root {
+    height: 100%;
+}
+
+/* ========================================================
+  FLEX
+======================================================== */
+
+.f-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-row {
+    display: flex;
+    align-items: center;
+}
+
+.cen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    flex: 1;
+}
+
+.a-s {
+    align-items: stretch;
+}
+
+.j-f-e {
+    justify-content: flex-end;
+}
+
+.g48 {
+    gap: 48px;
+}
+
+.g20 {
+    gap: 20px;
+}
+
+/* ========================================================
+  BUTTONS
+======================================================== */
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: all ease-in-out .17s;
+}
