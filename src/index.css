@@ -56,12 +56,20 @@ html,
     justify-content: flex-end;
 }
 
+.j-s-b {
+    justify-content: space-between;
+}
+
 .g48 {
     gap: 48px;
 }
 
 .g20 {
     gap: 20px;
+}
+
+.g16 {
+    gap: 16px;
 }
 
 .g12 {

@@ -13,6 +13,7 @@
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     transition: all ease-in-out .25s;
+    z-index: 100;
 }
 
 .dropdown.closed {
@@ -40,6 +41,12 @@
     font-variation-settings: 'wght' 550;
 }
 
+.dropdown-heading {
+    font-size: 13px;
+    color: #FAFAFA;
+    font-variation-settings: 'wght' 530;
+    padding: 0 12px;
+}
 
 /* ========================================================
   SEPERATOR
@@ -50,6 +57,7 @@
     height: 1px;
     margin: 0 -6px;
 }
+
 
 /* ========================================================
   ACCOUNT
@@ -133,4 +141,136 @@
 
 .dropdown-tab:hover img {
     opacity: 1;
+}
+
+/* ========================================================
+  NOTIFICATIONS
+======================================================== */
+
+/*============ TOGGLE ==================*/
+
+.dropdown-wrap .secbutton div {
+    position: relative;
+    transition: all ease-in-out .18s;
+}
+
+.dropdown-wrap .secbutton div::before {
+    position: absolute;
+    width: 6px;
+    aspect-ratio: 1;
+    background-color: #0072F5;
+    display: block;
+    content: "";
+    border-radius: 50px;
+    top: -1px;
+    opacity: 0;
+    transition: all ease-in-out .18s;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown-wrap.read .secbutton div::before {
+    opacity: 1;
+} 
+
+.dropdown-wrap.open .secbutton {
+    background-color: hsl(0, 0%, 100%, .08);
+}
+
+.dropdown-wrap.open .secbutton img {
+    opacity: 1;
+}
+
+.dropdown-wrap.open .secbutton div {
+    transform: rotate(-30deg);
+}
+
+/*============ DROPDOWN ==================*/
+
+.dropdown.notifications {
+    width: 320px;
+}
+
+
+/*============ SECBUTTON ==================*/
+
+.dd-button-sec {
+    padding: 11px;
+    border-radius: 8px;
+    font-variation-settings: 'wght' 530;
+    color: #333;
+    font-size: 12px;
+}
+
+.dd-button-sec img {
+    opacity: .1;
+}
+
+.dd-button-sec:hover {
+    color: #484848;
+    background-color: hsl(0, 0%, 90%, .02);
+}
+
+.dd-button-sec:hover img {
+    opacity: .2;
+}
+
+/*============ NOTIFICATIONS TAB ==================*/
+
+.notification-tab {
+    padding: 12px;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 12px;
+    font-variation-settings: 'wght' 550;
+}
+
+.notifications-heading {
+    color: #595959;
+    font-variation-settings: 'wght' 550;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.notification-tab:hover {
+    background-color: hsl(0, 0%, 100%, .03);
+    color: #4D4D4D;
+}
+
+.notification-tab:hover .notifications-heading {
+    color: #B3B3B3;
+}
+
+.notification-tab.unread {
+    color: #4D4D4D;
+}
+
+.notification-tab.unread .notifications-heading {
+    color: #D9D9D9;
+}
+
+.notification-tab.unread:hover {
+    color: #666666;
+}
+
+.notification-tab.unread:hover .notifications-heading {
+    color: #FCFCFC;
+}
+
+/*============ BUTTON ==================*/
+
+.dd-button {
+    border: 1px solid hsl(0, 0%, 100%, .04);
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 13px;
+    font-variation-settings: 'wght' 530;
+}
+
+.dd-button:hover {
+    background-color: hsl(0, 0%, 100%, .02);
+    border-color: hsl(0, 0%, 100%, .02);
+    color: #4D4D4D;
 }

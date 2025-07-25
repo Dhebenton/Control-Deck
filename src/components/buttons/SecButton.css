@@ -1,0 +1,21 @@
+/* ========================================================
+  BUTTON
+======================================================== */
+
+.secbutton {
+    min-width: 28px;
+    aspect-ratio: 1;
+    border-radius: 6px;
+}
+
+.secbutton:hover {
+    background-color: hsl(0, 0%, 100%, .08);
+}
+
+.secbutton img {
+    opacity: .85;
+}
+
+.secbutton:hover img {
+    opacity: 1;
+}
