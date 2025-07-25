@@ -37,13 +37,13 @@
 .navigation.closed .navigation-block > :nth-child(-n +2) {
     opacity: 0;
     pointer-events: none;
-    transition: all cubic-bezier(0.25, 0.8, 0.25, 1) .2s;
+    transition: all .2s ease-in-out;
 }
 
 .navigation.closed .tab,
 .navigation.closed .searchbar {
     color: transparent;
-    transition: all cubic-bezier(0.25, 0.8, 0.25, 1) .2s;
+    transition: all .2s ease-in-out ;
 }
 
 .navigation.closed .close-nav img {
@@ -61,12 +61,12 @@
 .navigation.opening .tab p,
 .navigation.opening .searchbar > :nth-last-child(-n +2),
 .navigation.opening .navigation-block > :nth-child(-n +2) {
-    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1) .1s;
+    transition: all .2s ease-in-out .1s;
 }
 
 .navigation.opening .tab,
 .navigation.opening .searchbar {
-    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1) .1s;
+    transition: all .2s ease-in-out .1s;
 }
 
 /* ========================================================
