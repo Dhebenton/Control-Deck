@@ -2,9 +2,64 @@
   DROPDOWN
 ======================================================== */
 
+.dropdown {
+    position: absolute;
+    bottom: -16px;
+    transform: translateY(100%);
+    background-color: hsl(0, 0%, 9%, .85);
+    padding: 6px;
+    border: 1px solid hsl(0, 0%, 100%, .04);
+    border-radius: 13px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    transition: all ease-in-out .25s;
+}
+
+.dropdown.closed {
+    transform: translateY(100%) scale(90%);
+    bottom: -32px;
+    opacity: 0;
+}
+
+/* ========================================================
+  DROPDOWN WRAP
+======================================================== */
+
+.dropdown-wrap {
+    position: relative;
+}
+
+/* ========================================================
+  TYPOGRAPHY
+======================================================== */
+
+.dropdown-label {
+    padding: 10px;
+    color: #333333;
+    font-size: 12px;
+    font-variation-settings: 'wght' 550;
+}
+
+
+/* ========================================================
+  SEPERATOR
+======================================================== */
+
+.dropdown .seperator {
+    background-color: hsl(0, 0%, 100%, .04);
+    height: 1px;
+    margin: 0 -6px;
+}
+
 /* ========================================================
   ACCOUNT
 ======================================================== */
+
+/*============ DROPDOWN ==================*/
+
+.dropdown.account {
+    width: 230px;
+}
 
 /*============ TOGGLE ==================*/
 
@@ -48,5 +103,34 @@
 }
 
 .dropdown-wrap.open .account-dropdown-toggle::before {
+    opacity: 1;
+}
+
+/*============ DROPDOWN TAB ==================*/
+
+.dropdown-tab {
+    padding: 10px;
+    border-radius: 8px;
+    font-variation-settings: 'wght' 530;
+    color: #C3C3C3;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    height: 35px;
+    align-items: center;
+}
+
+.dropdown-tab img {
+    opacity: .75;
+    align-self: center;
+    justify-self: center;
+}
+
+.dropdown-tab:hover {
+    color: #FCFCFC;
+    background-color: hsl(0, 0%, 90%, .05);
+}
+
+.dropdown-tab:hover img {
     opacity: 1;
 }

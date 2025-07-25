@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import ProfilePicture from './assets/account/profile-picture.png'
 import './Dropdown.css'
+import User from './assets/account/user.svg'
+import Book from './assets/account/book.svg'
+import Mail from './assets/account/mail.svg'
+import SignOut from './assets/account/sign-out.svg'
+import Chat from './assets/account/speech-bubble.svg'
 
 function Account({}) {
     const [ open, setOpen ] = useState(false)
@@ -42,7 +47,30 @@ function Account({}) {
                 <img src={ProfilePicture} />
             </button>
             { open && 
-                <div className={`dropdown account p6 g6 f-col ${ animation ? 'closed' : ''}`} ></div>
+                <div className={`dropdown account g6 f-col ${ animation ? 'closed' : ''}`} >
+                    <p className="dropdown-label">daniil.hebenton@gmail.com</p>
+                    <button className="dropdown-tab g12">
+                        <img src={User} />
+                        Account & Preferences
+                    </button>
+                    <button className="dropdown-tab g12">
+                        <img src={Book} />
+                        Resources
+                    </button>
+                    <button className="dropdown-tab g12">
+                        <img src={Mail} />
+                        Contact Support
+                    </button>
+                    <div className="seperator"></div>
+                    <button className="dropdown-tab g12">
+                        <img src={Chat} />
+                        Feedback
+                    </button>
+                    <button className="dropdown-tab g12">
+                        <img src={SignOut} />
+                        Sign Out
+                    </button>
+                </div>
             }
         </div>
     )
