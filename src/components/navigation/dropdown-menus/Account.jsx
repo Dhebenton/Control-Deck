@@ -38,7 +38,7 @@ function Account({}) {
 
     return (
         <div className={`dropdown-wrap account ${toggle ? 'open' : ''}`} ref={dropdownRef}>
-            <button className="account-dropdown-toggle">
+            <button onClick={handleOpen} className="account-dropdown-toggle">
                 <img src={ProfilePicture} />
             </button>
         </div>

@@ -6,6 +6,8 @@
   ACCOUNT
 ======================================================== */
 
+/*============ TOGGLE ==================*/
+
 .dropdown-wrap.account,
 .account-dropdown-toggle,
 .account-dropdown-toggle img {
@@ -18,7 +20,29 @@
     position: relative;
 }
 
+.account-dropdown-toggle::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    top: -4px;
+    border-radius: 6px;
+    z-index: 1;
+    border: 2px solid #0072F5;
+    transition: all ease-in-out .25s;
+    opacity: 0;
+}
+
 .account-dropdown-toggle:hover {
     opacity: 1;
 }
 
+.dropdown-wrap.open .account-dropdown-toggle {
+    opacity: 1;
+}
+
+.dropdown-wrap.open .account-dropdown-toggle::before {
+    opacity: 1;
+}

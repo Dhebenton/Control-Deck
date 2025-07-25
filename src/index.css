@@ -73,4 +73,10 @@ button {
     border: none;
     background-color: transparent;
     transition: all ease-in-out .17s;
+    cursor: pointer;
 }
+
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    top: -2px;
