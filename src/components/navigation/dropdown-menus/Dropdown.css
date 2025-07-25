@@ -11,8 +11,12 @@
 .dropdown-wrap.account,
 .account-dropdown-toggle,
 .account-dropdown-toggle img {
-    width: 32px;
-    max-height: 32px;
+    width: 32px !important;
+    max-height: 32px !important;
+}
+
+.account-dropdown-toggle img {
+    display: block;
 }
 
 .account-dropdown-toggle {

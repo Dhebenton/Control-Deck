@@ -41,6 +41,9 @@ function Account({}) {
             <button onClick={handleOpen} className="account-dropdown-toggle">
                 <img src={ProfilePicture} />
             </button>
+            { open && {
+                
+            }}
         </div>
     )
 
