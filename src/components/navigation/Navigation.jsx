@@ -19,7 +19,7 @@ function Navigation({ searchToggle, handleSearchOpen}) {
         if (closed) {
             setClosed(false)
             setOpening(true)
-            setTimeout(() => setOpening(false), 450)
+            setTimeout(() => setOpening(false), 300)
         } else {
             setClosed(true)
         }

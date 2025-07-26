@@ -12,7 +12,7 @@
     border-radius: 13px;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    transition: all ease-in-out .25s;
+    transition: all ease .25s;
     z-index: 100;
 }
 
@@ -98,7 +98,7 @@
     border-radius: 6px;
     z-index: 1;
     border: 2px solid #0072F5;
-    transition: all ease-in-out .25s;
+    transition: all ease .25s;
     opacity: 0;
 }
 
@@ -151,7 +151,7 @@
 
 .dropdown-wrap .secbutton div {
     position: relative;
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
 }
 
 .dropdown-wrap .secbutton div::before {
@@ -164,7 +164,7 @@
     border-radius: 50px;
     top: -1px;
     opacity: 0;
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
     left: 0;
     z-index: 1;
 }

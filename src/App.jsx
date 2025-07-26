@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navigation from './components/navigation/Navigation'
 import Search from './components/search/Search'
+import Canvas from './components/canvas/Canvas'
 
 function App() {
   const [ searchOpen, setSearchOpen ] = useState(false)
@@ -24,6 +25,7 @@ function App() {
     <>
       <Navigation searchToggle={searchToggle} handleSearchOpen={handleSearchOpen} />
       {searchOpen && <Search searchAnimation={searchAnimation}/>}
+      <Canvas />
     </>
   )
 }

@@ -5,7 +5,7 @@
 .navigation {
     width: 240px;
     position: relative;
-    transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .navigation > :last-child {
@@ -37,13 +37,13 @@
 .navigation.closed .navigation-block > :nth-child(-n +2) {
     opacity: 0;
     pointer-events: none;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .navigation.closed .tab,
 .navigation.closed .searchbar {
     color: transparent;
-    transition: all .2s ease-in-out ;
+    transition: all 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .navigation.closed .close-nav img {
@@ -61,12 +61,12 @@
 .navigation.opening .tab p,
 .navigation.opening .searchbar > :nth-last-child(-n +2),
 .navigation.opening .navigation-block > :nth-child(-n +2) {
-    transition: all .2s ease-in-out .1s;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1) 0.1s;
 }
 
 .navigation.opening .tab,
 .navigation.opening .searchbar {
-    transition: all .2s ease-in-out .1s;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1) 0.1s;
 }
 
 /* ========================================================
@@ -92,11 +92,10 @@
     z-index: 1;
     width: 100%;
     height: 100%;
-    border-radius: 7px;
     border-radius: 8px;
     z-index: 0;
     opacity: .0;
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
     background: linear-gradient(-180deg, rgba(255, 255, 255) 0%, rgba(255, 255, 255, 50%) 100%);
 }
 
@@ -110,7 +109,7 @@
     border-radius: 7px;
     display: block;
     content: "";
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
 }
 
 .tab img {
@@ -175,7 +174,7 @@
     background: linear-gradient(180deg, #C3C3C6 0%, #777779 100%);
     border-radius: 50px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 35%);
-    transition: all ease-in-out .25s;
+    transition: all ease .25s;
     transform: translateX(-19px);
 }
 
@@ -185,7 +184,7 @@
 
 .theme-toggle img {
     position: absolute;
-    transition: all ease-in-out .25s;
+    transition: all ease .25s;
 }
 
 .theme-toggle > :first-child {

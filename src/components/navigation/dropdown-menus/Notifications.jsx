@@ -13,7 +13,7 @@ function Notifications({}) {
         if (open) {
             setToggle(false)
             setAnimation(true)
-            setTimeout(() => setOpen(false), 200)
+            setTimeout(() => setOpen(false), 250)
         } else {
             setToggle(true)
             setTimeout(() => setAnimation(false), 1) 

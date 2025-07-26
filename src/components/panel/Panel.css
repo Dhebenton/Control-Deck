@@ -1,0 +1,109 @@
+/* ========================================================
+  PANEL
+======================================================== */
+
+.panel {
+    background-color: #0C0C0C;
+    width: 240px;
+    padding: 20px 0;
+    position: relative;
+    color: #FAFAFA;
+    font-size: 16px;
+    font-variation-settings: 'wght' 550;
+}
+
+.panel > :nth-child(-n +2) {
+    width: 240px;
+    padding: 0 20px;
+}
+
+/* ========================================================
+  TABS
+======================================================== */
+
+.panel-label {
+    color: #303030;
+    padding: 24px 0 12px 0;
+    font-size: 12px;
+    font-variation-settings: 'wght' 600;
+}
+
+.panel-tab {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    height: 35px;
+    border-radius: 7px;
+    position: relative;
+    align-items: center;
+    font-variation-settings: 'wght' 580;
+    color: #5E5E5E;
+    font-size: 12px;
+}
+
+.panel-tab img {
+    opacity: .4;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.panel-tab p {
+    z-index: 2;
+}
+
+.panel-tab div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all ease .18s;
+    z-index: 0;
+    border-radius: 7px;
+    opacity: 0;
+    background: linear-gradient(-180deg, rgba(255, 255, 255) 0%, rgba(255, 255, 255, 50%) 100%);
+}
+
+.panel-tab::before {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    border-radius: 6px;
+    display: block;
+    content: "";
+    transition: all ease .18s;
+}
+
+.panel-tab:hover {
+    color: #9D9D9D;
+    background-color: #121212;
+}
+
+.panel-tab:hover img {
+    opacity: .7;
+}
+
+.panel-tab.active {
+    color: #D9D9D9;
+    background-color: #141414;
+}
+
+.panel-tab.active img {
+    opacity: 1;
+}
+
+.panel-tab.active div {
+    opacity: .03;
+}
+
+.panel-tab.active::before {
+    background-color: #141414;
+}
+
+.panel-tab.abs {
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+}

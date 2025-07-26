@@ -64,6 +64,10 @@ html,
     gap: 48px;
 }
 
+.g40 {
+    gap: 40px;
+}
+
 .g20 {
     gap: 20px;
 }
@@ -93,7 +97,7 @@ html,
 ======================================================== */
 
 img, p {
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
 }
 
 /* ========================================================
@@ -104,6 +108,6 @@ button {
     outline: none;
     border: none;
     background-color: transparent;
-    transition: all ease-in-out .18s;
+    transition: all ease .18s;
     cursor: pointer;
 }
