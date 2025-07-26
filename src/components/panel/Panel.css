@@ -9,7 +9,13 @@
     position: relative;
     color: #FAFAFA;
     font-size: 16px;
+    transition: all ease .3s;
     font-variation-settings: 'wght' 550;
+    overflow: hidden;
+}
+
+.panel.closed {
+    width: 0px;
 }
 
 .panel > :nth-child(-n +2) {
@@ -106,4 +112,5 @@
     position: absolute;
     bottom: 20px;
     width: 200px;
+    right: 0px;
 }

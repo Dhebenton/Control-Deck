@@ -274,3 +274,48 @@
     border-color: hsl(0, 0%, 100%, .02);
     color: #4D4D4D;
 }
+
+/* ========================================================
+  TOOLBAR
+======================================================== */
+
+/*============ TOGGLE ==================*/
+
+.dropdown-wrap.open .dropdown-button > :last-child img {
+    transform: rotate(-180deg);
+}
+
+/*============ DROPDOWN ==================*/
+
+.dropdown.toolbar {
+    right: 0;
+    width: 220px;
+}
+
+
+/*============ QR CODE ==================*/
+
+.toolbar-qr-wrap {
+    margin: 0 10px 6px 10px;
+    padding: 16px;
+    background-color: hsl(0, 0%, 0%, .2);
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 100%, .05);
+}
+
+.toolbar-qr-wrap img {
+    width: 100%;
+}
+
+/*============ BUTTON ==================*/
+
+.dropdown.toolbar .button {
+    margin: 6px 10px;
+}
+
+/*============ TYPOGRAPHY ==================*/
+
+.dropdown.toolbar .dropdown-label {
+    line-height: 1.4;
+    margin: -4px 0;
+}

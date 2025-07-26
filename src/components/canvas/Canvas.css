@@ -3,8 +3,9 @@
 ======================================================== */
 
 .canvas {
-    background-color: #0F0F0F;
-    overflow: hidden;
-    border-radius: 24px;
-    border: 1px solid #121212;
+  background-color: #0F0F0F;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid #121212;
+  position: relative;
 }

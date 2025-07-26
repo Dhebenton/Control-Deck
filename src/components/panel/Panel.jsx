@@ -24,15 +24,15 @@ import PlansAndBilling from './panel-groups/PlansAndBilling';
 import UsersAndAccess from './panel-groups/UsersAndAccess';
 import LogsAndReports from './panel-groups/LogsAndReports';
 
-function Panel({}) {
+function Panel({ handlePanelClose, panelOpen }) {
     const { navigationTab, setNavigationTab, setPanelTab } = useUndoState();
     const active = navigationTab.present;
 
     return (
-        <div className="panel f-col a-f-e g40">
+        <div className={`panel f-col a-f-e g40 ${panelOpen ? '' : 'closed'}`}>
             <div className="f-row j-s-b">
                 {active}
-                <SecButton iconLeft={ClosePanel} />
+                <SecButton iconLeft={ClosePanel} click={handlePanelClose} />
             </div>
             { active === 'Dashboard' && <Dashboard /> }
             { active === 'Atri' && <Atri /> }

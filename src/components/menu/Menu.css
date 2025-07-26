@@ -1,0 +1,40 @@
+/* ========================================================
+  MENU
+======================================================== */
+
+.menu {
+    padding: 16px 28px 44px 28px;
+    position: sticky;
+    left: 0;
+    color: #FAFAFA;
+    font-size: 16px;
+    font-variation-settings: 'wght' 570;
+}
+
+.menu .button.icon {
+    min-width: 35px;
+    min-height: 35px;
+}
+
+.menu-icon {
+    padding-right: 12px;
+}
+
+/* ========================================================
+  MENU BUTTON
+======================================================== */
+
+.menu-button-wrap {
+    width: 0px;
+    overflow: hidden;
+    transition: all ease .18s;
+}
+
+.menu-button-wrap.open {
+    width: 48px;
+}
+
+
+.menu-button-wrap button {
+    margin-right: 20px;
+}

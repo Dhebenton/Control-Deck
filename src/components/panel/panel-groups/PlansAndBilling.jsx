@@ -5,7 +5,6 @@ import Integrations from './icons/integrations.svg'
 import Wrench from './icons/wrench.svg'
 import Tag from './icons/tag.svg'
 import Card from './icons/card.svg'
-import Gear from './icons/gear.svg'
 import React from "react";
 
 const tabs = [

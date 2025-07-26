@@ -1,5 +1,5 @@
 import { useUndoState } from "../../../UndoContext";
-import Backups from './icons/squares.svg'
+import Backups from './icons/squaresround.svg'
 import Reset from './icons/reload.svg'
 import Calendar from './icons/calendar.svg'
 import Squares from './icons/squares.svg'
@@ -10,9 +10,9 @@ import React from "react";
 const tabs = [
     { id: 'Manual Backup', icon: Reset, group: 'Backup Actions' },
     { id: 'Backup Schedule', icon: Calendar, group: 'Backup Actions' },
-    { id: 'Restore Points', icon: Squares, group: '' },
-    { id: 'Backup Logs', icon: Folder, group: '' },
-    { id: 'Security Settings', icon: Gear, group: 'Settings' }
+    { id: 'Restore Points', icon: Squares, group: 'Recovery & History' },
+    { id: 'Backup Logs', icon: Folder, group: 'Recovery & History' },
+    { id: 'Backup Settings', icon: Gear, group: 'Settings' }
 ];
 
 function BackupsAndRestore({}) {
