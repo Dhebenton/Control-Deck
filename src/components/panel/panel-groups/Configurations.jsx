@@ -1,21 +1,29 @@
 import { useUndoState } from "../../../UndoContext";
-import Backups from './icons/squares.svg'
-import Reset from './icons/reload.svg'
-import Calendar from './icons/calendar.svg'
-import Squares from './icons/squares.svg'
+import Globe from './icons/globe.svg'
+import Cloud from './icons/cloudup.svg'
+import Code from './icons/codebrackets.svg'
+import Link from './icons/link.svg'
 import Folder from './icons/folder-open.svg'
+import Search from './icons/searchcircle.svg'
+import Terminal from './icons/codeline.svg'
+import CMSicon from './icons/cms.svg'
+import SquareHallow from './icons/squarehallow.svg'
 import Gear from './icons/gear.svg'
 import React from "react";
 
 const tabs = [
-    { id: 'Manual Backup', icon: Reset, group: 'Backup Actions' },
-    { id: 'Backup Schedule', icon: Calendar, group: 'Backup Actions' },
-    { id: 'Restore Points', icon: Squares, group: '' },
-    { id: 'Backup Logs', icon: Folder, group: '' },
-    { id: 'Security Settings', icon: Gear, group: 'Settings' }
+    { id: 'Manual Backup', icon: Cloud, group: 'Deployment & Runtime' },
+    { id: 'Backup Schedule', icon: Code, group: 'Deployment & Runtime' },
+    { id: 'Backup Schedule', icon: Link, group: 'Deployment & Runtime' },
+    { id: 'Backup Schedule', icon: Folder, group: 'Deployment & Runtime' },
+    { id: 'Restore Points', icon: Search, group: 'Site Behaviour & Metadata' },
+    { id: 'Backup Logs', icon: Terminal, group: 'Site Behaviour & Metadata' },
+    { id: 'Backup Logs', icon: CMSicon, group: 'Site Behaviour & Metadata' },
+    { id: 'Security Settings', icon: SquareHallow, group: 'System-Level & Settings' },
+    { id: 'Security Settings', icon: Gear, group: 'System-Level & Settings' }
 ];
 
-function BackupsAndRestore({}) {
+function Configurations({}) {
     const { panelTab, setPanelTab } = useUndoState();
     const currentTab = panelTab.present;
 
@@ -27,9 +35,9 @@ function BackupsAndRestore({}) {
 
     return (
         <div className="f-col g6">
-            <button onClick={() => setPanelTab('Backups & Restore')} className={`panel-tab g12 ${currentTab === 'Backups & Restore' ? ' active' : ''}`}>
-                <img src={Backups} />
-                <p>Backups & Restore</p>
+            <button onClick={() => setPanelTab('Configurations')} className={`panel-tab g12 ${currentTab === 'Configurations' ? ' active' : ''}`}>
+                <img src={Globe} />
+                <p>Configurations</p>
                 <div></div>
             </button>
             {Object.entries(groups).map(([groupName, groupTabs]) => (
@@ -55,4 +63,4 @@ function BackupsAndRestore({}) {
     );
 }
 
-export default BackupsAndRestore;
+export default Configurations;

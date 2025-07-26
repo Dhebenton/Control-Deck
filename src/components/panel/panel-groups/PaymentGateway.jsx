@@ -1,22 +1,23 @@
 import { useUndoState } from "../../../UndoContext";
-import Backups from './icons/squares.svg'
-import Reset from './icons/reload.svg'
-import Calendar from './icons/calendar.svg'
-import Squares from './icons/squares.svg'
-import Folder from './icons/folder-open.svg'
+import Card from './icons/card.svg'
+import Tags from './icons/tag.svg'
+import Cart from './icons/cart.svg'
+import Users from './icons/users.svg'
+import Shield from './icons/shield-hallow.svg'
 import Gear from './icons/gear.svg'
+import IntegrationsHub from './icons/integrations.svg'
 import React from "react";
 
 const tabs = [
-    { id: 'Manual Backup', icon: Reset, group: 'Backup Actions' },
-    { id: 'Backup Schedule', icon: Calendar, group: 'Backup Actions' },
-    { id: 'Restore Points', icon: Squares, group: '' },
-    { id: 'Backup Logs', icon: Folder, group: '' },
-    { id: 'Security Settings', icon: Gear, group: 'Settings' }
+    { id: 'Products & Pricing', icon: Tags, group: 'Commerce Configuration' },
+    { id: 'Checkout Settings', icon: Cart, group: 'Commerce Configuration' },
+    { id: 'Customer Management', icon: Users, group: 'Operations & Compliance' },
+    { id: 'Security & Compliance', icon: Shield, group: 'Operations & Compliance' },
+    { id: 'Payment Settings', icon: Gear, group: 'Settings' }
 ];
 
-function BackupsAndRestore({}) {
-    const { panelTab, setPanelTab } = useUndoState();
+function PaymentGateway({}) {
+    const { navigationTab, setNavigationTab, panelTab, setPanelTab } = useUndoState();
     const currentTab = panelTab.present;
 
     const groups = tabs.reduce((acc, tab) => {
@@ -27,9 +28,9 @@ function BackupsAndRestore({}) {
 
     return (
         <div className="f-col g6">
-            <button onClick={() => setPanelTab('Backups & Restore')} className={`panel-tab g12 ${currentTab === 'Backups & Restore' ? ' active' : ''}`}>
-                <img src={Backups} />
-                <p>Backups & Restore</p>
+            <button onClick={() => setPanelTab('Payment Gateway')} className={`panel-tab g12 ${currentTab === 'Payment Gateway' ? ' active' : ''}`}>
+                <img src={Card} />
+                <p>Payment Gateway</p>
                 <div></div>
             </button>
             {Object.entries(groups).map(([groupName, groupTabs]) => (
@@ -51,8 +52,13 @@ function BackupsAndRestore({}) {
                     })}
                 </React.Fragment>
             ))}
+            <button onClick={() => { setNavigationTab('Integrations Hub'); setPanelTab('Integrations Hub');}} className="panel-tab g12 abs">
+                <img src={IntegrationsHub} />
+                <p>Back To Hub</p>
+                <div></div>
+            </button>
         </div>
     );
 }
 
-export default BackupsAndRestore;
+export default PaymentGateway;

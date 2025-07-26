@@ -1,21 +1,22 @@
 import { useUndoState } from "../../../UndoContext";
-import Backups from './icons/squares.svg'
-import Reset from './icons/reload.svg'
-import Calendar from './icons/calendar.svg'
-import Squares from './icons/squares.svg'
-import Folder from './icons/folder-open.svg'
+import Rocket from './icons/rocket.svg'
+import Monitor from './icons/monitor.svg'
+import Integrations from './icons/integrations.svg'
+import Wrench from './icons/wrench.svg'
+import Tag from './icons/tag.svg'
+import Card from './icons/card.svg'
 import Gear from './icons/gear.svg'
 import React from "react";
 
 const tabs = [
-    { id: 'Manual Backup', icon: Reset, group: 'Backup Actions' },
-    { id: 'Backup Schedule', icon: Calendar, group: 'Backup Actions' },
-    { id: 'Restore Points', icon: Squares, group: '' },
-    { id: 'Backup Logs', icon: Folder, group: '' },
-    { id: 'Security Settings', icon: Gear, group: 'Settings' }
+    { id: 'Website Plans', icon: Monitor, group: 'Plans' },
+    { id: 'Integrations', icon: Integrations, group: 'Plans' },
+    { id: 'Subscription Controls', icon: Wrench, group: 'Subscription Controls' },
+    { id: 'Billing History', icon: Tag, group: 'Billing & Payments' },
+    { id: 'Payment Methods', icon: Card, group: 'Billing & Payments' },
 ];
 
-function BackupsAndRestore({}) {
+function PlansAndBilling({}) {
     const { panelTab, setPanelTab } = useUndoState();
     const currentTab = panelTab.present;
 
@@ -27,9 +28,9 @@ function BackupsAndRestore({}) {
 
     return (
         <div className="f-col g6">
-            <button onClick={() => setPanelTab('Backups & Restore')} className={`panel-tab g12 ${currentTab === 'Backups & Restore' ? ' active' : ''}`}>
-                <img src={Backups} />
-                <p>Backups & Restore</p>
+            <button onClick={() => setPanelTab('Plans & Billing')} className={`panel-tab g12 ${currentTab === 'Plans & Billing' ? ' active' : ''}`}>
+                <img src={Rocket} />
+                <p>Plans & Billing</p>
                 <div></div>
             </button>
             {Object.entries(groups).map(([groupName, groupTabs]) => (
@@ -55,4 +56,4 @@ function BackupsAndRestore({}) {
     );
 }
 
-export default BackupsAndRestore;
+export default PlansAndBilling;

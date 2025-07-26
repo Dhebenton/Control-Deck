@@ -18,7 +18,7 @@ const tabs = [
     { id: 'Image Optimiser', icon: Image, group: 'Intergrations' },
     { id: 'Cookies Manager', icon: Cookies, group: 'Intergrations' },
     { id: 'Smart Forms', icon: Form, group: 'Intergrations' },
-    { id: 'Payment Gateway ', icon: Card, group: 'Intergrations' },
+    { id: 'Payment Gateway', icon: Card, group: 'Intergrations' },
     { id: 'AI Chatbot', icon: Bot, group: 'Intergrations' },
     { id: 'Auto Sitemap', icon: Flow, group: 'Intergrations' }
 ];

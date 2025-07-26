@@ -1,22 +1,25 @@
 import { useUndoState } from "../../../UndoContext";
+import Image from './icons/image.svg'
 import Backups from './icons/squares.svg'
-import Reset from './icons/reload.svg'
-import Calendar from './icons/calendar.svg'
-import Squares from './icons/squares.svg'
-import Folder from './icons/folder-open.svg'
+import OpenFolder from './icons/folder-open.svg'
+import Cloud from './icons/cloud.svg'
+import Pause from './icons/pause.svg'
+import Wrench from './icons/wrench.svg'
 import Gear from './icons/gear.svg'
+import IntegrationsHub from './icons/integrations.svg'
 import React from "react";
 
 const tabs = [
-    { id: 'Manual Backup', icon: Reset, group: 'Backup Actions' },
-    { id: 'Backup Schedule', icon: Calendar, group: 'Backup Actions' },
-    { id: 'Restore Points', icon: Squares, group: '' },
-    { id: 'Backup Logs', icon: Folder, group: '' },
-    { id: 'Security Settings', icon: Gear, group: 'Settings' }
+    { id: 'Image Library', icon: Backups, group: 'Monitoring' },
+    { id: 'Optimisation Logs', icon: OpenFolder, group: 'Monitoring' },
+    { id: 'CDN Delivery Toggle', icon: Cloud, group: 'Delivery & Performance' },
+    { id: 'Lazy Load Settings', icon: Pause, group: 'Delivery & Performance' },
+    { id: 'Compression Settings', icon: Wrench, group: 'Delivery & Performance' },
+    { id: 'Optimisation Settings', icon: Gear, group: 'Settings' }
 ];
 
-function BackupsAndRestore({}) {
-    const { panelTab, setPanelTab } = useUndoState();
+function ImageOptimiser({}) {
+    const { navigationTab, setNavigationTab, panelTab, setPanelTab } = useUndoState();
     const currentTab = panelTab.present;
 
     const groups = tabs.reduce((acc, tab) => {
@@ -27,9 +30,9 @@ function BackupsAndRestore({}) {
 
     return (
         <div className="f-col g6">
-            <button onClick={() => setPanelTab('Backups & Restore')} className={`panel-tab g12 ${currentTab === 'Backups & Restore' ? ' active' : ''}`}>
-                <img src={Backups} />
-                <p>Backups & Restore</p>
+            <button onClick={() => setPanelTab('Image Optimiser')} className={`panel-tab g12 ${currentTab === 'Image Optimiser' ? ' active' : ''}`}>
+                <img src={Image} />
+                <p>Image Optimiser</p>
                 <div></div>
             </button>
             {Object.entries(groups).map(([groupName, groupTabs]) => (
@@ -51,8 +54,13 @@ function BackupsAndRestore({}) {
                     })}
                 </React.Fragment>
             ))}
+            <button onClick={() => { setNavigationTab('Integrations Hub'); setPanelTab('Integrations Hub');}} className="panel-tab g12 abs">
+                <img src={IntegrationsHub} />
+                <p>Back To Hub</p>
+                <div></div>
+            </button>
         </div>
     );
 }
 
-export default BackupsAndRestore;
+export default ImageOptimiser;

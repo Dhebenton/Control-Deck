@@ -28,13 +28,27 @@ function Tabs() {
         { id: 'Split Testing', icon: SplitTesting },
         { id: 'Notifications', icon: Notifications },
         { id: 'Security', icon: Security },
-        { id: 'Integrations Hub', icon: Integrations },
+        {
+            id: 'Integrations Hub',
+            icon: Integrations,
+            children: [
+            'CMS',
+            'Booking System',
+            'Image Optimiser',
+            'Cookies Manager',
+            'Smart Forms',
+            'Payment Gateway',
+            'AI Chatbot',
+            'Auto Sitemap'
+            ]
+        },
         { id: 'Backups & Restore', icon: BackupsAndRestore },
         { id: 'Configurations', icon: Configurations },
         { id: 'Plans & Billing', icon: PlansAndBilling },
         { id: 'Users & Access', icon: UsersAndAccess },
         { id: 'Logs & Reports', icon: LogsAndReports }
     ];
+
 
     const handleTabClick = (id) => {
         setNavigationTab(id);
@@ -48,7 +62,8 @@ function Tabs() {
                 <button
                     key={tab.id}
                     onClick={() => handleTabClick(tab.id)}
-                    className={`tab g12 ${active === tab.id ? 'active' : ''}`}
+                    className={`tab g12 ${active === tab.id || (tab.children?.includes(active)) ? 'active' : ''}`}
+
                 >
                     <img src={tab.icon} alt={tab.id} />
                     <p>{tab.id}</p>

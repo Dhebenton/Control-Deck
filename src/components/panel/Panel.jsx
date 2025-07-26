@@ -6,12 +6,23 @@ import Dashboard from './panel-groups/Dashboard';
 import Atri from './panel-groups/Atri';
 import Analytics from './panel-groups/Analytics';
 import Performance from './panel-groups/Performance';
-import { act } from 'react';
 import SplitTesting from './panel-groups/SplitTesting';
 import Notifications from './panel-groups/Notifications';
 import Security from './panel-groups/Security';
 import IntegrationsHub from './panel-groups/IntegrationsHub';
 import CMS from './panel-groups/CMS';
+import BookingSystem from './panel-groups/BookingSystem';
+import ImageOptimiser from './panel-groups/ImageOptimiser';
+import CookiesManager from './panel-groups/CookiesManager';
+import SmartForms from './panel-groups/SmartForms';
+import PaymentGateway from './panel-groups/PaymentGateway';
+import AIChatbot from './panel-groups/AIChatbot';
+import AutoSitemap from './panel-groups/AutoSitemap';
+import BackupsAndRestore from './panel-groups/BackupsAndRestore';
+import Configurations from './panel-groups/Configurations';
+import PlansAndBilling from './panel-groups/PlansAndBilling';
+import UsersAndAccess from './panel-groups/UsersAndAccess';
+import LogsAndReports from './panel-groups/LogsAndReports';
 
 function Panel({}) {
     const { navigationTab, setNavigationTab, setPanelTab } = useUndoState();
@@ -32,6 +43,18 @@ function Panel({}) {
             { active === 'Security' && <Security /> } 
             { active === 'Integrations Hub' && <IntegrationsHub /> }
             { active === 'CMS' && <CMS /> }
+            { active === 'Booking System' && <BookingSystem /> }
+            { active === 'Image Optimiser' && <ImageOptimiser /> }
+            { active === 'Cookies Manager' && <CookiesManager /> }
+            { active === 'Smart Forms' && <SmartForms /> }
+            { active === 'Payment Gateway' && <PaymentGateway /> }
+            { active === 'AI Chatbot' && <AIChatbot />}
+            { active === 'Auto Sitemap' && <AutoSitemap /> }
+            { active === 'Backups & Restore' && <BackupsAndRestore /> }
+            { active === 'Configurations' && <Configurations /> }
+            { active === 'Plans & Billing' && <PlansAndBilling />}
+            { active === 'Users & Access' && <UsersAndAccess /> }
+            { active === 'Logs & Reports' && <LogsAndReports /> }
         </div>
     )
 }
