@@ -7,7 +7,10 @@
     border: 1px solid hsl(0, 0%, 90%, .02);
     border-radius: 18px;
     position: relative;
-    z-index: 0;
+}
+
+.card.p24 {
+    padding: 24px;
 }
 
 .card.p16 {
@@ -72,3 +75,5 @@
 .card.metrics-card:hover .secbutton{
     opacity: 1;
 }
+
+

@@ -6,6 +6,7 @@ import Share from '../../../assets/icons/share.svg'
 import SecButton from "../../../buttons/SecButton";
 import FourMetricsGrid from "../components/FourMetricsGrid";
 import AtriInsights from "../../atri/card/atri-insights/AtriInsights";
+import LineChartMain from "../cards/LineChartMain";
 
 function Analytics({}) {
     return (
@@ -25,6 +26,7 @@ function Analytics({}) {
                     <FourMetricsGrid />
                     <AtriInsights />
                 </div>
+                <LineChartMain />
             </div>
         </div>
     )
