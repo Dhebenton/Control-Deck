@@ -38,8 +38,8 @@ function OverlayDotGrid({ xTicks = 12, yTicks = 8 }) {
         Array.from({ length: yTicks }).map((_, j) => (
           <rect
             key={`dot-${i}-${j}`}
-            x={`${((i + 0.28 + i * 0.06) / xTicks) * 100}%`}
-            y={`${((j + 0.18) / yTicks) * 100}%`}
+            x={`${((i + 0.29 + i * 0.019) / xTicks) * 100}%`}
+            y={`${((j + 0.13) / yTicks) * 100}%`}
             width={3}
             height={3}
             rx={1.5}
@@ -105,9 +105,9 @@ export default function LineChartMain() {
               stroke="#333"
               axisLine={false}
               tickLine={false}
-              width={30}
+              width={41}
               className="chart-ticker"
-              tick={{ dx: 6, fill: '#A020F0' }}
+              tick={{ dx: 6 }}
               tickFormatter={(v) => `${v}%`}
               domain={[0, paddedMax]}
               ticks={percentageTicks}

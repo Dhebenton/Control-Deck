@@ -7,7 +7,7 @@ import SecButton from "../../../buttons/SecButton";
 import FourMetricsGrid from "../components/FourMetricsGrid";
 import AtriInsights from "../../atri/card/atri-insights/AtriInsights";
 import LineChartMain from "../cards/LineChartMain";
-
+import '../Anlytics.css'
 function Analytics({}) {
     return (
         <div className="content f-col g52">
