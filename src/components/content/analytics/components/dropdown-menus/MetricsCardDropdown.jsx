@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Chevron from '../../../../assets/icons/chevron.svg';
+import Chevron from '../../../../assets/icons/chevron-metrics-card.svg';
 import AvgSessionIcon from '../../assets/metric-card-icons/session-duration.svg';
 import UniqueVisitorsIcon from '../../assets/metric-card-icons/unique-visitor.svg';
 import ConversionsIcon from '../../assets/metric-card-icons/tag.svg';

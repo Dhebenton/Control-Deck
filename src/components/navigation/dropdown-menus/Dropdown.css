@@ -337,4 +337,15 @@
 
 .dropdown-wrap.metrics-card-dropdown .card-heading img {
     opacity: 0;
+    transform: translateY(1px);
+    margin-right: 1px;
+}
+
+.dropdown-wrap.metrics-card-dropdown .card-heading:hover img {
+    opacity: .8;
+}
+
+.dropdown-wrap.metrics-card-dropdown.open .card-heading img {
+    opacity: 1;
+    transform: translateY(1px) rotate(180deg);
 }

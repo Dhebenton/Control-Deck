@@ -30,7 +30,7 @@
 
 .change-from-last {
     font-size: 13px;
-    font-variation-settings: 'wght' =;
+    font-variation-settings: 'wght' 560;
     color: #1DA33F;
 }
 
@@ -49,17 +49,21 @@
 
 .card.metrics-card .secbutton{
     opacity: 0;
+    min-width: 26px;
 }
 
 .card.metrics-card .change-from-last {
     margin-top: -3px;
 }
 
-.metrics-card.fade > * {
+.metrics-card.fade > :nth-child(-n +3) {
     opacity: 0;
-    transition: opacity .2s ease;
 }
 
-.metrics-card > * {
-    transition: opacity .2s ease;
+.metrics-card > :nth-child(-n +3) {
+    transition: opacity .15s linear;
+}
+
+.card.metrics-card:hover .secbutton{
+    opacity: 1;
 }
