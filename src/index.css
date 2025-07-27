@@ -48,6 +48,18 @@ html,
     flex: 1;
 }
 
+.flex4 {
+    flex: 4;
+}
+
+.flex5 {
+    flex: 5;
+}
+
+.flex6 {
+    flex: 6;
+}
+
 .a-s {
     align-items: stretch;
 }
@@ -64,12 +76,20 @@ html,
     justify-content: space-between;
 }
 
+.g52 {
+    gap: 52px;
+}
+
 .g48 {
     gap: 48px;
 }
 
 .g40 {
     gap: 40px;
+}
+
+.g24 {
+    gap: 24px;
 }
 
 .g20 {
@@ -99,6 +119,17 @@ html,
 .g4 {
     gap: 4px;
 }
+
+/* ========================================================
+  GRID
+======================================================== */
+
+.four-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 
 /* ========================================================
   TRANSITIONS

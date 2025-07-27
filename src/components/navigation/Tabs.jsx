@@ -1,23 +1,21 @@
 import { useUndoState } from "../../UndoContext";
 
-import Dashboard from './assets/tabs/dashboard.svg'
-import Atri from './assets/tabs/atri.svg'
-import Analytics from './assets/tabs/chart.svg'
-import Performance from './assets/tabs/performance.svg'
-import SplitTesting from './assets/tabs/split-testing.svg'
-import Notifications from './assets/tabs/notifications.svg'
-import Security from './assets/tabs/security.svg'
-import Integrations from './assets/tabs/intergrations.svg'
-import BackupsAndRestore from './assets/tabs/backups-and-restore.svg'
-import Configurations from './assets/tabs/configurations.svg'
-import PlansAndBilling from './assets/tabs/plans-and-billing.svg'
-import UsersAndAccess from './assets/tabs/users-and-access.svg'
-import LogsAndReports from './assets/tabs/logs-and-reports.svg'
-
-
+import Dashboard from './assets/tabs/dashboard.svg';
+import Atri from './assets/tabs/atri.svg';
+import Analytics from './assets/tabs/chart.svg';
+import Performance from './assets/tabs/performance.svg';
+import SplitTesting from './assets/tabs/split-testing.svg';
+import Notifications from './assets/tabs/notifications.svg';
+import Security from './assets/tabs/security.svg';
+import Integrations from './assets/tabs/intergrations.svg';
+import BackupsAndRestore from './assets/tabs/backups-and-restore.svg';
+import Configurations from './assets/tabs/configurations.svg';
+import PlansAndBilling from './assets/tabs/plans-and-billing.svg';
+import UsersAndAccess from './assets/tabs/users-and-access.svg';
+import LogsAndReports from './assets/tabs/logs-and-reports.svg';
 
 function Tabs() {
-    const { navigationTab, setNavigationTab, setPanelTab } = useUndoState();
+    const { navigationTab, setNavigationTab } = useUndoState();
     const active = navigationTab.present;
 
     const tabs = [
@@ -32,14 +30,14 @@ function Tabs() {
             id: 'Integrations Hub',
             icon: Integrations,
             children: [
-            'CMS',
-            'Booking System',
-            'Image Optimiser',
-            'Cookies Manager',
-            'Smart Forms',
-            'Payment Gateway',
-            'AI Chatbot',
-            'Auto Sitemap'
+                'CMS',
+                'Booking System',
+                'Image Optimiser',
+                'Cookies Manager',
+                'Smart Forms',
+                'Payment Gateway',
+                'AI Chatbot',
+                'Auto Sitemap'
             ]
         },
         { id: 'Backups & Restore', icon: BackupsAndRestore },
@@ -49,12 +47,9 @@ function Tabs() {
         { id: 'Logs & Reports', icon: LogsAndReports }
     ];
 
-
     const handleTabClick = (id) => {
         setNavigationTab(id);
-        setPanelTab(id);
     };
-
 
     return (
         <div className="f-col g6">
@@ -63,7 +58,6 @@ function Tabs() {
                     key={tab.id}
                     onClick={() => handleTabClick(tab.id)}
                     className={`tab g12 ${active === tab.id || (tab.children?.includes(active)) ? 'active' : ''}`}
-
                 >
                     <img src={tab.icon} alt={tab.id} />
                     <p>{tab.id}</p>

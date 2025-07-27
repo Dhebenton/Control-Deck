@@ -319,3 +319,22 @@
     line-height: 1.4;
     margin: -4px 0;
 }
+
+/* ========================================================
+  METRICS DROPDOWN
+======================================================== */
+
+.dropdown.metrics-card-dropdown {
+    width: 220px;
+}
+
+.dropdown.metrics-card-dropdown .dropdown-tab {
+    height: 42px;
+    font-size: 13px;
+    display: flex;
+    padding: 8px;
+}
+
+.dropdown-wrap.metrics-card-dropdown .card-heading img {
+    opacity: 0;
+}

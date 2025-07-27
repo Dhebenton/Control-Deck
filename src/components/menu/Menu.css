@@ -9,6 +9,9 @@
     color: #FAFAFA;
     font-size: 16px;
     font-variation-settings: 'wght' 570;
+    background: linear-gradient(-180deg, rgba(15, 15, 15, 99%) 0%, rgba(15, 15, 15, 99%) 68%, rgba(15, 15, 15, 0%) 100%);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 }
 
 .menu .button.icon {

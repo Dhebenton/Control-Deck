@@ -1,0 +1,65 @@
+/* ========================================================
+  CARD
+======================================================== */
+
+.card {
+    background-color: hsl(0, 0%, 50%, .03);
+    border: 1px solid hsl(0, 0%, 90%, .02);
+    border-radius: 18px;
+}
+
+.card.p16 {
+    padding: 16px;
+}
+
+/* ========================================================
+  TYPOGRAPHY
+======================================================== */
+
+.card-heading {
+    font-size: 13px;
+    font-variation-settings: 'wght' 550;
+    color: hsl(0, 0%, 80%);
+}
+
+.metric-label {
+    font-size: 22px;
+    font-variation-settings: 'wght' 600;
+    color: #FAFAFA;
+}
+
+.change-from-last {
+    font-size: 13px;
+    font-variation-settings: 'wght' =;
+    color: #1DA33F;
+}
+
+.change-from-last.neg {
+    color: #AD1F1F;
+}
+
+.change-from-last span {
+    font-variation-settings: 'wght' 540;
+    color: #404040;
+}
+
+/* ========================================================
+  METRICS CARD
+======================================================== */
+
+.card.metrics-card .secbutton{
+    opacity: 0;
+}
+
+.card.metrics-card .change-from-last {
+    margin-top: -3px;
+}
+
+.metrics-card.fade > * {
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.metrics-card > * {
+    transition: opacity .2s ease;
+}
