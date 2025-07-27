@@ -3,9 +3,11 @@
 ======================================================== */
 
 .card {
-    background-color: hsl(0, 0%, 50%, .03);
+    background-color: hsl(0, 0%, 50%, .02);
     border: 1px solid hsl(0, 0%, 90%, .02);
     border-radius: 18px;
+    position: relative;
+    z-index: 0;
 }
 
 .card.p16 {
@@ -22,10 +24,14 @@
     color: hsl(0, 0%, 80%);
 }
 
+.card-heading.f14 {
+    font-size: 14px;
+}
+
 .metric-label {
     font-size: 22px;
     font-variation-settings: 'wght' 600;
-    color: #FAFAFA;
+    color: #ededed;
 }
 
 .change-from-last {
@@ -39,8 +45,7 @@
 }
 
 .change-from-last span {
-    font-variation-settings: 'wght' 540;
-    color: #404040;
+    color: #4d4d4d;
 }
 
 /* ========================================================

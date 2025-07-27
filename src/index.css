@@ -68,6 +68,10 @@ html,
     align-items: flex-end;
 }
 
+.a-f-s {
+    align-items: flex-start;
+}
+
 .j-f-e {
     justify-content: flex-end;
 }
@@ -86,6 +90,10 @@ html,
 
 .g40 {
     gap: 40px;
+}
+
+.g32 {
+    gap: 32px;
 }
 
 .g24 {

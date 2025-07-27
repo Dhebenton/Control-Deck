@@ -1,0 +1,33 @@
+/* ========================================================
+  ATRIINSGITH
+======================================================== */
+
+.atri-icon {
+    margin: -7px;
+    transform: translateY(-2px);
+}
+
+.atri-label {
+    font-size: 14px;
+    font-variation-settings: 'wght' 550;
+    color: #333;
+}
+
+.atri-insight-block {
+    padding: 16px;
+    font-size: 15px;
+    font-variation-settings: 'wght' 580;
+    color: #E6E6E6;
+    height: 100%;
+    border-radius: 14px;
+    border: 1px solid hsl(0, 0%, 80%, .03);
+    background-color: hsl(0, 0%, 42%, .02);
+}
+
+.atri-insight-block p {
+    line-height: 1.65;
+}
+
+.atri-insight-card > :last-child {
+    height: 100%;
+}

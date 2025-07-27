@@ -338,7 +338,7 @@
 .dropdown-wrap.metrics-card-dropdown .card-heading img {
     opacity: 0;
     transform: translateY(1px);
-    margin-right: 1px;
+    margin-left: 1px;
 }
 
 .dropdown-wrap.metrics-card-dropdown .card-heading:hover img {

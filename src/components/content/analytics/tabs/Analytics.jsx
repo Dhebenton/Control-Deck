@@ -5,6 +5,7 @@ import Lightbulb from '../../../assets/icons/bulb.svg'
 import Share from '../../../assets/icons/share.svg'
 import SecButton from "../../../buttons/SecButton";
 import FourMetricsGrid from "../components/FourMetricsGrid";
+import AtriInsights from "../../atri/card/atri-insights/AtriInsights";
 
 function Analytics({}) {
     return (
@@ -20,9 +21,9 @@ function Analytics({}) {
                 <SecButton iconLeft={Share} />
             </div>
             <div className="f-col g20">
-                <div className="f-row g20">
+                <div className="f-row g20 a-s">
                     <FourMetricsGrid />
-                    <div className="flex6"></div>
+                    <AtriInsights />
                 </div>
             </div>
         </div>
