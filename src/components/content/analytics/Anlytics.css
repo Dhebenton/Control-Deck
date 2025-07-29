@@ -7,3 +7,62 @@
     color: #333333;
     font-size: 13px;
 }
+
+.recharts-surface:focus,
+.recharts-surface *:focus {
+  outline: none !important;
+}
+
+
+
+
+/* ========================================================
+  INDEX KEY
+======================================================== */
+
+.index-key {
+  height: 8px;
+  aspect-ratio: 1;
+  background-color: #0072F5;
+  border-radius: 50px;
+}
+
+.index-key.shade2 {
+  background-color: #9E41F6;
+}
+
+.index-key-label {
+  font-variation-settings: 'wght' 600;
+  color: #333333;
+  font-size: 14px;
+}
+
+
+/* ========================================================
+  TOOL TIP
+======================================================== */
+
+.chart-tooltip {
+  background-color: hsl(0, 0%, 9%, .85);
+  border: 1px solid hsl(0, 0%, 100%, .04);
+  border-radius: 13px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 16px;
+}
+
+.tooltip-label {
+  font-size: 12px;
+  font-variation-settings: 'wght' 600;
+  color: #E6E6E6;
+}
+
+.tooltip-key-label {
+  color: hsl(0, 0%, 35%);
+  font-size: 12px;
+  font-variation-settings: 'wght' 550;
+}
+
+.tooltip-key-label span {
+  color: hsl(0, 0%, 99%);
+}
