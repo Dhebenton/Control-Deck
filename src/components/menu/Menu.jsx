@@ -42,7 +42,6 @@ function Menu({ handlePanelClose, menuOpen }) {
 
     return (
         <div className="menu f-row g12">
-            <div className="menu-background"></div>
             <div className="f-row flex">
                 <div className={`menu-button-wrap ${menuOpen ? 'open' : ''}`}>
                     <SecButton iconLeft={OpenPanel} click={handlePanelClose} />

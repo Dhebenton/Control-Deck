@@ -1,0 +1,90 @@
+/* ========================================================
+  SIDEPANEL
+======================================================== */
+
+.sidepanel {
+    background-color: hsl(0, 0%, 5%, .8);
+    transition: all ease 0.3s;
+    min-width: 420px;
+    max-width: 420px;
+    border-left: 1px solid hsl(0, 0%, 100%, .02);
+}
+
+.sidepanel.transition {
+    min-width: 0px;
+    max-width: 0px;
+}
+
+/* ========================================================
+  SIDEPANEL CONTENT
+======================================================== */
+
+.sidepanel-content {
+    padding: 24px;
+    color: #FAFAFA;
+    font-size: 14px;
+    font-variation-settings: 'wght' 570;
+    min-width: 400px;
+    height: 100%;
+}
+
+
+/* ========================================================
+  ATRI
+======================================================== */
+
+.atri-heading {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.atri-input {
+    background-color: hsl(0, 0%, 80%, .02);
+    padding: 10px;
+    border-radius: 22px;
+    opacity: .8;
+    transition: all ease .18s;
+}
+
+.atri-input:hover {
+    opacity: 1;
+}
+
+.atri-input-form {
+    padding: 0 12px;
+    height: 44px;
+    background-color: hsl(0, 0%, 80%, .03);
+    border-radius: 12px;
+}
+
+.atri-input-field {
+    font-size: 13px;
+    color: #FAFAFA;
+    height: 44px;
+    font-variation-settings: 'wght' 570;
+}
+
+.atri-input-field:focus {
+    caret-color: white;
+}
+
+.atri-input-field::placeholder {
+    color: hsl(0, 0%, 25%);
+}
+
+.sidepanel-content .atri-input .secbutton {
+    min-width: 24px;
+}
+
+.sidepanel-content .atri-input .secbutton img {
+    height: 11px;
+}
+
+.sidepanel-content .atri-input .secbutton.plus img{
+    height: 10.5px;
+}
+
+.atri-input-form .secbutton img {
+    transform: translateX(-1px) translateY(1px);
+}

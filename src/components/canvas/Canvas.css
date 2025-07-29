@@ -18,14 +18,21 @@
   position: relative;
 }
 
+.content-wrap > :last-child {
+  height: 100%;
+}
+
+.dashboard {
+  height: 100%;
+}
+
 /* ========================================================
   CONTENT
 ======================================================== */
 
 .content {
   padding: 28px;
-  padding-top: 95px;
-  margin-top: -95px;
+  padding-bottom: 97px;
   scrollbar-width: none;
   overflow-y: auto;
   height: 100%;

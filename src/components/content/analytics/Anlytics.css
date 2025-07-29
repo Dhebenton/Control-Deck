@@ -31,6 +31,11 @@
   background-color: #9E41F6;
 }
 
+.index-key.shade3 {
+  background-color: #689DD9;
+}
+
+
 .index-key-label {
   font-variation-settings: 'wght' 600;
   color: #333333;
@@ -151,4 +156,25 @@ th, td {
   background-color: #0072F5;
   height: 100%;
   border-radius: 50px;
+}
+
+
+
+/* ========================================================
+ PIE CHART
+======================================================== */
+
+.pie-chart path {
+  stroke: none;
+}
+
+.pie-chart-data-block {
+  transition: all ease .15s;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.pie-chart-data-block.active {
+  background-color: hsl(0, 0%, 100%, .04);
 }

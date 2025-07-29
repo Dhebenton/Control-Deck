@@ -9,7 +9,10 @@ import AtriInsights from "../../atri/card/atri-insights/AtriInsights";
 import LineChartMain from "../cards/LineChartMain";
 import '../Anlytics.css'
 import WorldChart from "../cards/WorldChart";
-function Analytics({}) {
+import Card from "../../../global-components/card/Card";
+import PieChartMain from "../cards/PieChart";
+
+function Analytics({ handleSidePanel }) {
     return (
         <div className="content f-col g52">
             <div className="f-row g6">
@@ -18,9 +21,9 @@ function Analytics({}) {
                     <ButtonFilter text={'Add Comparison'} />
                     <ButtonFilter text={'Add Filter'} />
                 </div>
-                <SecButton iconLeft={AtriIcon} />
-                <SecButton iconLeft={Lightbulb} />
-                <SecButton iconLeft={Share} />
+                <SecButton click={handleSidePanel} iconLeft={AtriIcon} />
+                <SecButton click={handleSidePanel} iconLeft={Lightbulb} />
+                <SecButton click={handleSidePanel} iconLeft={Share} />
             </div>
             <div className="f-col g14">
                 <div className="wrap f-row g14 a-s">
@@ -29,6 +32,11 @@ function Analytics({}) {
                 </div>
                 <LineChartMain />
                 <WorldChart />
+                <div className="f-row g14">
+                    <PieChartMain />
+                    <Card style={'flex9 p16'}/>
+                    <Card style={'flex6 p16'}/>
+                </div>
             </div>
         </div>
     )

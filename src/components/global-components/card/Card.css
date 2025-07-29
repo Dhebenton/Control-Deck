@@ -80,6 +80,10 @@
     opacity: 1;
 }
 
+.metric-label.f16 {
+    font-size: 16px;
+}
+
 .metric-label.f26 {
     font-size: 26px;
 }
