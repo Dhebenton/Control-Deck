@@ -94,7 +94,7 @@ export default function LineChartMain() {
   const [hoveredMonth, setHoveredMonth] = useState(null);
 
   return (
-    <Card style="p24 f-col g40">
+    <Card style="p24 f-col g36">
       <p className="card-heading f14">Traffic Overview</p>
       <div className="f-row j-f-b g24">
         <div className="f-col flex g14">

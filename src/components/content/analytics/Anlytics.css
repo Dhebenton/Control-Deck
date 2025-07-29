@@ -66,3 +66,89 @@
 .tooltip-key-label span {
   color: hsl(0, 0%, 99%);
 }
+
+/* ========================================================
+  WORLD CHART
+======================================================== */
+
+.world-map path {
+  opacity: .7;
+  transition: all ease .2s;
+}
+
+.world-map path:hover {
+  opacity: 1;
+}
+
+.chart-tooltip.world-map img{
+  height: 14px;
+}
+
+.chart-tooltip.world-map {
+  position: absolute;
+  top: 20%;
+  transition: all ease .2s;
+}
+
+.chart-tooltip.world-map.fade {
+  opacity: 0;
+}
+
+
+/* ========================================================
+  WORLD CHART TABLE
+======================================================== */
+
+.country-chart img {
+  width: 16px;
+}
+
+.country-chart {
+  overflow: hidden ;
+  border-radius: 16px;
+  border-collapse: collapse;
+}
+
+.country-chart tr {
+  background-color: hsl(0, 0%, 80%, .03);
+}
+
+th, td {
+  padding: 12px 16px;
+}
+
+
+.country-chart th {
+  font-size: 13px;
+  font-variation-settings: 'wght' 650;
+  color: #333;
+}
+
+.table-chart-label {
+  font-size: 14px;
+  color: #E6E6E6;
+}
+
+.country-chart tr {
+  border-bottom: 4px solid hsl(0, 0%, 7%,  .8);
+}
+
+.country-chart tbody> :last-child {
+  border-bottom: none;
+}
+
+.table-progress-bar {
+  min-width: 110px;
+  border-radius: 50px;
+  width: 100%;
+  height: 11px;
+  background-color: hsl(0, 0%, 100%, .06);
+  padding: 1px;
+}
+
+.table-progress-bar div {
+  width: 30%;
+  background-color: #0072F5;
+  height: 100%;
+  border-radius: 50px;
+}

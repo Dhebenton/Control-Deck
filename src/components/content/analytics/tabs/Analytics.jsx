@@ -8,6 +8,7 @@ import FourMetricsGrid from "../components/FourMetricsGrid";
 import AtriInsights from "../../atri/card/atri-insights/AtriInsights";
 import LineChartMain from "../cards/LineChartMain";
 import '../Anlytics.css'
+import WorldChart from "../cards/WorldChart";
 function Analytics({}) {
     return (
         <div className="content f-col g52">
@@ -21,12 +22,13 @@ function Analytics({}) {
                 <SecButton iconLeft={Lightbulb} />
                 <SecButton iconLeft={Share} />
             </div>
-            <div className="f-col g20">
-                <div className="wrap f-row g20 a-s">
+            <div className="f-col g14">
+                <div className="wrap f-row g14 a-s">
                     <FourMetricsGrid />
-                    <AtriInsights cardStyle={'min-w600'} />
+                    <AtriInsights cardStyle={'min-w700'} />
                 </div>
                 <LineChartMain />
+                <WorldChart />
             </div>
         </div>
     )

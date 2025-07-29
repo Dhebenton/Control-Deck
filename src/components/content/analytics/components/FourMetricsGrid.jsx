@@ -26,7 +26,7 @@ function FourMetricsGrid() {
     };
 
     return (
-        <div className="four-grid flex5 g20">
+        <div className="four-grid min-w500 flex5 g14">
             {selectedMetrics.map((metric, i) => (
                 <MetricCard
                     key={`${i}-${metric}`}
