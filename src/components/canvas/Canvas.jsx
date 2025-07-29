@@ -4,7 +4,7 @@ import Panel from "../panel/Panel";
 import './Canvas.css'
 import { useUndoState } from "../../UndoContext";
 import AnalyticsContent from "./content/AnalyticsContent";
-import './Sidepanel.css'
+import './SidePanel.css'
 import AtriChat from "./sidepanels/atri-chat/AtriChat";
 
 function Canvas({}) {
