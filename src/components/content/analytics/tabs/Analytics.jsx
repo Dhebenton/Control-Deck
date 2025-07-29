@@ -22,9 +22,9 @@ function Analytics({}) {
                 <SecButton iconLeft={Share} />
             </div>
             <div className="f-col g20">
-                <div className="f-row g20 a-s">
+                <div className="wrap f-row g20 a-s">
                     <FourMetricsGrid />
-                    <AtriInsights />
+                    <AtriInsights cardStyle={'min-w600'} />
                 </div>
                 <LineChartMain />
             </div>

@@ -1,4 +1,4 @@
-// chartData.js
+
 
 export const chartData = [
   { month: 'Jan', total: 26342, unique: 13876 },

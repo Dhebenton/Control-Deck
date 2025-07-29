@@ -9,26 +9,37 @@ import {
 import { chartData as rawData } from '../../../data/chartData';
 import Card from '../../../global-components/card/Card';
 
-const chartData = rawData.map((d) => ({
-  ...d,
-  percentage: d.total > 0 ? Math.round((d.unique / d.total) * 100) : 0,
-}));
+const chartData = rawData.map((d, i, arr) => {
+  const previous = arr[i - 1];
+  const percentage = d.total > 0 ? Math.round((d.unique / d.total) * 100) : 0;
+  const changeFromLast =
+    previous && previous.total > 0
+      ? Math.round(((d.total - previous.total) / previous.total) * 100)
+      : 0;
+  return {
+    ...d,
+    percentage,
+    changeFromLast,
+  };
+});
 
-const rawMax = Math.max(...chartData.map(d => d.percentage));
+const latest = chartData[chartData.length - 1];
+const positive = latest.changeFromLast >= 0;
+const rawMax = Math.max(...chartData.map((d) => d.percentage));
 const paddedMax = Math.min(100, rawMax * 1.3);
 const percentageTicks = Array.from({ length: 8 }, (_, i) =>
   Math.round((i * paddedMax) / 7)
 );
 
-
 function OverlayDotGrid({ xTicks = 12, yTicks = 8 }) {
   return (
     <svg
+    className='ws'
       style={{
         position: 'absolute',
         top: 0,
-        left: 23,
-        width: 'calc(100% - 46px)',
+        left: 35,
+        width: 'calc(100% - 65px)',
         height: '100%',
         pointerEvents: 'none',
         zIndex: 5,
@@ -38,7 +49,7 @@ function OverlayDotGrid({ xTicks = 12, yTicks = 8 }) {
         Array.from({ length: yTicks }).map((_, j) => (
           <rect
             key={`dot-${i}-${j}`}
-            x={`${((i + 0.29 + i * 0.019) / xTicks) * 100}%`}
+            x={`${((i + 0.14 + i * 0.04) / xTicks) * 100}%`}
             y={`${((j + 0.13) / yTicks) * 100}%`}
             width={3}
             height={3}
@@ -58,6 +69,23 @@ export default function LineChartMain() {
   return (
     <Card style="p24 f-col g40">
       <p className="card-heading f14">Traffic Overview</p>
+      <div className="f-row j-f-b g24">
+        <div className="f-col flex g14">
+          <p className="f26 metric-label">{latest.total}</p>
+          <p className={`f15 change-from-last ${positive ? 'positive' : 'neg'}`}>
+            {positive ? '+' : '-'}
+            {Math.abs(latest.changeFromLast)}% <span>From Last Month</span>
+          </p>
+        </div>
+        <div className="f-row g8">
+          <div className="index-key"></div>
+          <p className="index-key-label">Total Visitors</p>
+        </div>
+        <div className="f-row g8">
+          <div className="index-key shade2"></div>
+          <p className="index-key-label">Unique Visitors</p>
+        </div>
+      </div>
       <div style={{ position: 'relative', width: '100%', height: 400 }}>
         <OverlayDotGrid />
         <ResponsiveContainer width="100%" height="100%">
@@ -143,3 +171,4 @@ export default function LineChartMain() {
     </Card>
   );
 }
+

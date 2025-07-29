@@ -43,6 +43,10 @@
     color: #1DA33F;
 }
 
+.change-from-last.f15 {
+    font-size: 15px;
+}
+
 .change-from-last.neg {
     color: #AD1F1F;
 }
@@ -76,4 +80,29 @@
     opacity: 1;
 }
 
+.metric-label.f26 {
+    font-size: 26px;
+}
 
+
+
+/* ========================================================
+  INDEX KEY
+======================================================== */
+
+.index-key {
+    height: 8px;
+    aspect-ratio: 1;
+    background-color: #0072F5;
+    border-radius: 50px;
+}
+
+.index-key.shade2 {
+    color: #9E41F6;
+}
+
+.index-key-label {
+    font-variation-settings: 'wght' 550;
+    color: #333333;
+    font-size: 14px;
+}
