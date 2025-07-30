@@ -17,6 +17,10 @@ function Canvas({}) {
     const [ panelOpen, setPanelOpen ] = useState(true)
     const [ menuOpen, setMenuOpen ] = useState(false)
 
+    const [ atriSidePanel, setAtriSidepanel ] = useState(false)
+    const [ insightSidePanel, setInsightSidePanel ] = useState(false)
+    const [ shareSidePanel, setShareSidePanel ] = useState(false)
+
     function handlePanelClose() {
         if (panelOpen) {
             setPanelOpen(false)

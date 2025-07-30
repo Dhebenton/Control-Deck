@@ -9,7 +9,7 @@ const PieChartMain = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <Card style="flex4 p16 f-col g36 pie-chart">
+    <Card style="flex5 p16 f-col g36 pie-chart">
       <p className="card-heading f14">Traffic By Device</p>
 
       <div style={{ width: "100%", padding: "0 16px" }}>

@@ -11,6 +11,8 @@ import '../Anlytics.css'
 import WorldChart from "../cards/WorldChart";
 import Card from "../../../global-components/card/Card";
 import PieChartMain from "../cards/PieChart";
+import TrafficChannelBarChart from "../cards/TrafficChannelBarChart";
+import SpeedoemtreChart from "../cards/SpeedometreChart";
 
 function Analytics({ handleSidePanel }) {
     return (
@@ -32,10 +34,10 @@ function Analytics({ handleSidePanel }) {
                 </div>
                 <LineChartMain />
                 <WorldChart />
-                <div className="f-row g14">
+                <div className="f-row a-s g14">
+                    <TrafficChannelBarChart />
                     <PieChartMain />
-                    <Card style={'flex9 p16'}/>
-                    <Card style={'flex6 p16'}/>
+                    <SpeedoemtreChart />
                 </div>
             </div>
         </div>
